@@ -2,6 +2,8 @@
 
 [kpack-cli](https://github.com/vmware-tanzu/kpack-cli) plugin for [asdf](https://github.com/asdf-vm/asdf) version manager
 
+Heavily forked/copied from [asdf-kubectl](https://github.com/asdf-community/asdf-kubectl). Many thanks to all the contributors on that project.
+
 ## Installation
 
 ```
