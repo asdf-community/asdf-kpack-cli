@@ -34,4 +34,6 @@ Learn more about kpack @ https://github.com/pivotal/kpack
 
 The `ASDF_KPACKCLI_OVERWRITE_ARCH` variable can be used to override the architecture that is used for determining which kpack-cli build to download.
 
+## Known Bugs
 
+* kpack-cli versions before 0.7.0 do not download or install due to a change in the URL formatting of the github releases. If you need version 0.7.0 or before you should manually download and install the binaries from the [kpack-cli github releases page](https://github.com/vmware-tanzu/kpack-cli/releases)
