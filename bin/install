@@ -18,11 +18,12 @@ install_kpack() {
   mkdir -p "${bin_install_path}"
 
   local bin_path="${bin_install_path}/kpack"
-  echo "Downloading kpack from ${download_url}"
+  echo "[*] Downloading kpack-cli from ${download_url}"
   if curl -L -sf "$download_url" -o "$bin_path"; then
     chmod +x $bin_path
+    echo "[*] kpack-cli has been installed. Use 'kpack' to get started"
   else
-    echo "Failed to download kpack from ${download_url}. Does the version exist and is available in the requested $(get_cpu) architecture?"
+    echo "Failed to download kpack-cli from ${download_url}. Does the version exist and is available in the requested $(get_cpu) architecture?"
     exit 1
   fi
 }
@@ -33,7 +34,7 @@ get_arch() {
 
 get_cpu() {
   local machine_hardware_name
-  machine_hardware_name=${ASDF_KPACK_OVERWRITE_ARCH:-"$(uname -m)"}
+  machine_hardware_name=${ASDF_KPACKCLI_OVERWRITE_ARCH:-"$(uname -m)"}
 
   case "$machine_hardware_name" in
     'x86_64') local cpu_type="amd64";;
