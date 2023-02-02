@@ -17,11 +17,11 @@ install_kpack() {
   local download_url="$(get_download_url $version)"
   mkdir -p "${bin_install_path}"
 
-  local bin_path="${bin_install_path}/kpack"
+  local bin_path="${bin_install_path}/kp"
   echo "[*] Downloading kpack-cli from ${download_url}"
   if curl -L -sf "$download_url" -o "$bin_path"; then
     chmod +x $bin_path
-    echo "[*] kpack-cli has been installed. Use 'kpack' to get started"
+    echo "[*] kpack-cli has been installed. Use 'kp' to get started"
   else
     echo "Failed to download kpack-cli from ${download_url}. Does the version exist and is available in the requested $(get_cpu) architecture?"
     exit 1
