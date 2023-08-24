@@ -49,7 +49,7 @@ get_cpu() {
 get_download_url() {
   local version="$1"
   local platform="$(get_arch)"
-  echo "https://github.com/vmware-tanzu/kpack-cli/releases/download/v${version}/kp-${platform}-$(get_cpu)-${version}"
+  echo "https://github.com/buildpacks-community/kpack-cli/releases/download/v${version}/kp-${platform}-$(get_cpu)-${version}"
 }
 
 install_kpack $ASDF_INSTALL_TYPE $ASDF_INSTALL_VERSION $ASDF_INSTALL_PATH

@@ -11,7 +11,7 @@ function sort_versions() {
 }
 
 list_all_versions() {
-  git ls-remote --tags --refs https://github.com/vmware-tanzu/kpack-cli.git |
+  git ls-remote --tags --refs https://github.com/buildpacks-community/kpack-cli.git |
     grep -o 'refs/tags/.*' |
     cut -d/ -f3- |
     sed 's/^v//'
